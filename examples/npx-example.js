@@ -27,8 +27,8 @@ var walk = function (colorArray){
   _.each(animation.frames, function(frame){
     _.each(colorArray, function(color, colorIndex){
       var pixelIndex = frame + colorIndex;
-      if(frame + colorIndex >= animation.framelength-1){
-        pixelIndex = pixelIndex - animation.framelength;
+      if(frame + colorIndex >= animation._framelength-1){
+        pixelIndex = pixelIndex - animation._framelength;
       }
       animation.setPixel(pixelIndex, color, frame);
     });

@@ -4,10 +4,10 @@ var Animation = require('../lib/animation');
 describe('New animation', function(){
   it('should have reasonable defaults', function(){
     var animation = new Animation();
-    expect(animation.framelength).to.not.equal(undefined);
+    expect(animation._framelength).to.not.equal(undefined);
     expect(animation.length).to.not.equal(undefined);
-    expect(animation.buffer).to.not.equal(undefined);
-    expect(animation.intensity).to.not.equal(undefined);
+    expect(animation._buffer).to.not.equal(undefined);
+    expect(animation._intensity).to.not.equal(undefined);
   });
 });
 
@@ -19,8 +19,8 @@ describe('Creating a single frame animation', function(){
     animation = new Animation(LEDStripLength, 1);
   });
 
-  it('should have buffer length 3x LED strip length', function(){
-    expect(animation.buffer.length).to.equal(LEDStripLength*3);
+  it('should have _buffer length 3x LED strip length', function(){
+    expect(animation._buffer.length).to.equal(LEDStripLength*3);
   });
 });
 
@@ -33,9 +33,9 @@ describe('Creating a multi-frame animation', function(){
     longAnimation = new Animation(LEDStripLength, longFrames);
     shortAnimation = new Animation(LEDStripLength, shortFrames);
   });
-  it('should have a correct buffer length', function(){
-    expect(shortAnimation.buffer.length).to.equal(shortFrames*LEDStripLength*3);
-    expect(longAnimation.buffer.length).to.equal(longFrames*LEDStripLength*3);
+  it('should have a correct _buffer length', function(){
+    expect(shortAnimation._buffer.length).to.equal(shortFrames*LEDStripLength*3);
+    expect(longAnimation._buffer.length).to.equal(longFrames*LEDStripLength*3);
   });
 });
 
@@ -45,12 +45,12 @@ describe('animation.setAll', function(){
     beforeEach(function(){
       
     });
-    it('should set entire buffer to the color', function(){
+    it('should set entire _buffer to the color', function(){
 
     });
   });
   describe('with multi-frame', function(){
-    it('should set entire buffer to the color', function(){
+    it('should set entire _buffer to the color', function(){
 
     });
   });
