@@ -1,6 +1,6 @@
 {
   "name": "kk-npx",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Neopixel API for Tessel",
   "main": "index.js",
   "repository": {
